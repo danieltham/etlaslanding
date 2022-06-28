@@ -1,0 +1,123 @@
+
+@font-face {
+    font-family: 'main_font';
+    src: url(../../fonts/Montserrat-Regular.ttf);
+}
+
+.etlas_features{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.features_section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 0;
+    align-items: center;
+}
+
+.features_section h4{
+    font-size: 50px;
+    font-family: 'main_font';
+    color: #000;
+    text-align: center;
+}
+
+.features_box{
+    width: 25%;
+}
+
+.feature_img{
+    width: 40%;
+}
+
+.feature_img img{
+    width: 100%;
+}
+
+.feature h5{
+    font-size: 24px;
+    color: #000;
+    font-family: 'main_font';
+    font-weight: bold;
+    margin: 0;
+}
+
+.feature img{
+    width: 120px;
+    height: 120px;
+}
+
+ .features_box:nth-child(1) .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+ .features_box:nth-child(2) .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+ .features_box:nth-child(4) .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature p{
+    font-size: 18px;
+    font-family: 'main_font';
+    color: #000;
+    font-weight: 500;
+}
+
+
+.features_box:nth-child(2) .feature h5 ,.features_box:nth-child(2) .feature p{
+    text-align: left;
+}
+.features_box:nth-child(1) .feature h5 ,.features_box:nth-child(1) .feature p{
+    text-align: right;
+}
+.features_box:nth-child(4) .feature h5 ,.features_box:nth-child(4) .feature p{
+    text-align: center;
+}
+
+@media (max-width:1024px) {
+    .features_box{
+        width: 30%;
+    }
+}
+
+@media (max-width:700px) {
+
+    .features_box{
+        width: 100%;
+    }
+
+    .feature{
+        align-items: center !important;
+    }
+
+    .feature h5 ,.feature p{
+        text-align: center !important;
+    }
+
+    .feature_img{
+        width: 100%;
+    }
+    .features_section h4{
+        font-size: 35px;
+        margin: 0;
+        padding: .4em 0;
+    }
+    .features_box:nth-child(3) .feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

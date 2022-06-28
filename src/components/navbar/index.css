@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+  }
+
+  @font-face {
+      font-family: 'main_font';
+      src: url(../../fonts/Montserrat-Regular.ttf);
+  }
+  
+  body {
+    margin: 0px;
+    font-family: 'segoe ui';
+  }
+  
+  .nav {
+    padding: 20px 5em;
+    width: 100%;
+    background-color: #fff;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 40px;
+    font-family: 'main_font';
+    color: #000;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  .nav-title img{
+      margin-right: 15px;
+      width: 73px;
+      height: 73px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 8px ;
+    font-size: 20px;
+    margin: 0 1em;
+    font-family: 'main_font';
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    transition: .3s;
+  }
+  
+  .nav > .nav-links > a:hover {
+    color: rgba(0, 0, 0, .6);
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+
+  .nav-links button{
+      background-color: #1E3A39;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+      height: 60px;
+      padding: 0 1.5em;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      display: inline-block;
+      justify-content: center;
+      color: #fff;
+      font-size: 20px;
+      font-family: 'main_font';
+      transition: .3s;
+    }
+    
+    .nav-links button:hover{
+        
+        background-color: rgba(30, 58, 57 ,.8);
+    }
+
+
+  @media (max-width:1024px) {
+    .nav > .nav-links > a{
+        margin: 0 .5em;
+        font-size: 17px;
+    }
+
+    .nav-links button{
+        font-size: 17px;
+    }
+
+    .nav > .nav-header > .nav-title {
+        font-size: 25px;
+       
+      }
+    
+      .nav-title img{
+         
+          width: 40px;
+          height: 40px;
+          margin-right: 10px;
+      }
+
+      .nav{
+          padding: 20px 3em;
+      }
+      
+  }
+  
+
+  
+      
+  
+  
+  @media (max-width:700px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      /* position: absolute; */
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+  
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #000;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      z-index: 99;
+      background-color: #fff;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 75px;
+      left: 0px;
+    }
+    .nav > .nav-links > a   ,  .nav-links button{
+      display: block;
+      margin: 1.5em 1em;
+      
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(45vh - 50px);
+      overflow-y: auto;
+      /* background-color: #fff; */
+    }
+  }
+
+
+  @media (max-width:550px) {
+      .nav{
+          padding: 20px 1em;
+      }
+  }

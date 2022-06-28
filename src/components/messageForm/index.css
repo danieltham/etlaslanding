@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'main_font';
+    src: url(../../fonts/Montserrat-Regular.ttf);
+}
+
+
+.message_form_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em 0;
+    
+}
+
+.msg_form_container {
+    width: 40%;
+    position: relative;
+   padding: 2em 0;
+}
+
+.message_form{
+    background-color: #fff;
+    box-shadow: -7.5px 12.99px 50px rgba(0, 0, 0, .15);
+    border-radius: 80px;
+    padding: 3em 4em;
+   position: relative;
+   z-index: 3;
+    width: 100%;
+}
+
+.msg_form_container::before{
+    content: '';
+    top: -30px;
+    left: -30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 15px 100px 15px 15px;
+    background-color: #63C6F1;
+    position: absolute;
+   z-index: 1;
+}
+.msg_form_container::after{
+    content: '';
+    right: -30px;
+    bottom: -30px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px 15px 15px 15px;
+    background-color: #AFDCC9;
+    position: absolute;
+   z-index: 1;
+}
+
+.message_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message_form h4{
+    font-size: 36px;
+    font-family: 'main_font';
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.message_form p{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.form_inps{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form_inps div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.form_inps div input{
+    width: 48% !important;
+}
+
+.form_inps input{
+    width: 100%;
+    margin: 2.4em 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 16px;
+    font-family: 'main_font';
+    padding: 7px 4px 4px 4px;
+    outline: none;
+    border-bottom: 1px solid #C2C2C2;
+}
+
+.message_form button{
+    height: 60px;
+    font-size: 20px;
+    font-family: 'main_font';
+    background-color: #1E3A39;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2em;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+
+.form_section_txt{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0;
+}
+
+.form_section_txt h2{
+    font-size: 50px;
+    font-family: 'main_font';
+    font-weight: 700;
+    padding: 25px 0;
+    margin: 0;
+}
+
+.form_section_txt div{
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: -7.5px 1.99px 50px  rgba(0, 0, 0, .15);
+    padding: 1.5em 2em;
+    margin: 8px 0;
+    width: 100%;
+}
+
+.form_section_txt div span{
+    font-size: 18px;
+    font-family: 'main_font';
+    font-weight: 400;
+    line-height: 28px;
+
+}
+
+.form_section_txt div h6{
+    margin: 0;
+    font-size: 24px;
+    font-family: 'main_font';
+    font-weight: 600;
+    padding: 8px 0;
+}
+
+.form_section_txt p{
+    background-color: #D9F1FB;
+    border-radius: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 1em;
+    margin: 14px 0;
+}
+
+@media (max-width:1200px) {
+    .msg_form_container{
+        width: 50%;
+    }
+}
+
+@media (max-width:1024px) {
+    .message_form{
+        padding: 3em 2em;
+    }
+}
+
+@media (max-width:770px) {
+    .message_form_section{
+        flex-direction: column;
+    }
+    .msg_form_container{
+        width: 100%;
+        order: 2;
+    }
+    .form_section_txt{
+        width: 100%;
+        order: 1;
+    }
+
+    .form_section_txt h2{
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .message_form h4{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:550px) {
+    .msg_form_container::after{
+        width: 150px;
+        height: 150px;
+        right: -10px;
+    }   
+    .msg_form_container::before{
+        width: 150px;
+        height: 150px;
+        top: -30px;
+        left: -10px;
+    }   
+}
