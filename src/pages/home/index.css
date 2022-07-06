@@ -5,7 +5,7 @@
 
 .home_page{
     background-color: #F6FCFE;
-    padding: 2em 5em;
+    padding: 1em 1em;
     overflow-x: hidden;
     width: 100%;
 }
@@ -67,7 +67,7 @@
         font-size: 35px;
     }
     .home_page{
-        padding: 2em 3em;
+        padding: 1em 1em;
     }
 
     .ourCode_txt p{
@@ -97,7 +97,7 @@
 
 @media (max-width:550px) {
     .home_page{
-        padding: 2em 1em;
+        padding: 1em 1em;
     }
 }
 

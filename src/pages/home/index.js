@@ -4,7 +4,7 @@ import Features from "../../components/features";
 import Footer from "../../components/footer";
 import Navbar from "../../components/navbar";
 import './index.css'
-import ourCodeImg  from  '../../asset/codeImg.png'
+import ourCodeImg  from  '../../asset/etlasBoard.png'
 import MessageForm from "../../components/messageForm";
 import AboutSection from "../../components/about";
 
