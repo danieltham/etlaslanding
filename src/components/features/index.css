@@ -7,6 +7,7 @@
 .etlas_features{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: center;
     align-items: top;
     grid-template-columns: min-content;
@@ -31,15 +32,24 @@
 }
 
 .features_box{
-    width: 25%;
+    width: 35%;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.features_box_row_2{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 
 }
 
 .feature_img{
-    width: 40%;
-    height: 80%;
+    width: 65%;
+    height: 100%;
     align-items: top;
 }
 
@@ -48,7 +58,15 @@
     align-items: top;
 }
 
+
 .feature h5{
+    font-size: 22px;
+    color: #000;
+    font-family: 'main_font';
+    font-weight: bold;
+    margin: 0;
+}
+.feature_row_2 h5{
     font-size: 22px;
     color: #000;
     font-family: 'main_font';
@@ -57,61 +75,99 @@
 }
 
 .feature img{
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
+
 }
 
- .features_box:nth-child(1) .feature {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-end;
+.feature_row_2 img{
+    width: 140px;
+    height: 140px;
+
 }
- .features_box:nth-child(2) .feature {
+
+ .feature:nth-child(1) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: flex-start;
+    text-align: right;
 }
- .features_box:nth-child(4) .feature {
+ .feature:nth-child(2) {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    text-align: right;
+}
+ .feature:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+}
+
+.feature_row_2:nth-child(1) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    padding: 0em 3em;
+}
+ .feature_row_2:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    padding: 0em 3em;
+}
+ .feature_row_2:nth-child(3){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+    padding: 0em 3em;
 }
 
 .feature p{
-    font-size: 16px;
+    font-size: 18px;
     font-family: 'main_font';
     color: #000;
     font-weight: 500;
 }
 
-
-.features_box:nth-child(2) .feature h5 ,.features_box:nth-child(2) .feature p{
-    text-align: left;
+.feature_row_2 p{
+    font-size: 18px;
+    font-family: 'main_font';
+    color: #000;
+    font-weight: 500;
 }
-.features_box:nth-child(1) .feature h5 ,.features_box:nth-child(1) .feature p{
+
+/*.features_box:nth-child(1) .feature h5 ,.features_box:nth-child(1) .feature p{
+    text-align: right;
+}
+.features_box:nth-child(2) .feature h5 ,.features_box:nth-child(2) .feature p{
     text-align: right;
 }
 .features_box:nth-child(4) .feature h5 ,.features_box:nth-child(4) .feature p{
     text-align: center;
-}
+}*/
 
 @media (max-width:1024px) {
     .features_box{
-        width: 23%;
+        width: 30%;
     }
     .feature_img{
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
-        height: 80%;
-        align-items: top;
+        width: 70%;
+        height: 100%;
+        align-items: center;
     }
     
     .feature p{
-        font-size: 14px;
+        font-size: 16px;
         font-family: 'main_font';
         color: #000;
         font-weight: 500;
@@ -124,16 +180,54 @@
         font-weight: bold;
         margin: 0;
     }
+
+    .feature_row_2 p{
+        font-size: 16px;
+        font-family: 'main_font';
+        color: #000;
+        font-weight: 500;
+    }
+
+    .feature_row_2 h5{
+        font-size: 20px;
+        color: #000;
+        font-family: 'main_font';
+        font-weight: bold;
+        margin: 0;
+    }
 }
 
-@media (max-width:700px) {
+@media (max-width:900px) {
 
     .features_box{
         width: 100%;
     }
 
+    .features_box_row_2{
+        width: 100%;
+        display:flex;
+        flex-direction: wrap;
+        flex-direction: column;
+    }  
+
     .feature{
         align-items: center !important;
+    }
+
+    .feature_row_2:nth-child(1){
+        align-items: center !important;
+        width: 100%;
+        padding: 0em 0em;
+    }
+    .feature_row_2:nth-child(2){
+        align-items: center !important;
+        width: 100%;
+        padding: 0em 0em;
+    }
+    .feature_row_2:nth-child(3){
+        align-items: center !important;
+        width: 100%;
+        padding: 0em 0em;
     }
 
     .feature h5 ,.feature p{
@@ -148,9 +242,5 @@
         margin: 0;
         padding: .4em 0;
     }
-    .features_box:nth-child(3) .feature {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+
 }

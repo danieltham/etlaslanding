@@ -10,8 +10,7 @@ export default function MessageForm() {
         <div className="message_form">
           <h4>Leave a Message</h4>
           <p>
-            Duis accumsan libero suscipit tellus convallis, ac ultr ices leo
-            sollici tudin suspendisse et lectus.
+            Let us know how can we help
           </p>
 
           <div className="form_inps">

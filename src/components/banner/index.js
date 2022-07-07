@@ -10,10 +10,10 @@ export default function Banner(){
             <img className="banner_mob_icons" alt='' src={bannerMobIcons} />
             <div className="banner_txt">
                 <h3>Unifying Your Security</h3>
-                <p>Donec a massa vel enim ultricies bibendum. Vivamus ac semper ante, sit amet tincidunt nisi. Sed placerat sed magna diam, eu dignissim justo ornare ac sed dictum tristique pharetra aenean posuere hendrerit.</p>
+                <p>Etlas provides a single web-based platform for all your security management needs. Powered by a modern micro-computer, Etlas integrates access control, video surveillance, alarm systems, and all other third party systems on a single platform.  </p>
                 <div>
                     <input placeholder="Email address ...." />
-                    <button>Get started</button>
+                    <button>Get in touch</button>
                 </div>
             </div>
 

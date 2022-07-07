@@ -14,7 +14,7 @@ export default function Navbar() {
             <div class="nav-header">
                 <div class="nav-title">
                     <img alt='' src={logo} />
-                    JoGeek
+                    Etlas
                 </div>
             </div>
             <div class="nav-btn">
