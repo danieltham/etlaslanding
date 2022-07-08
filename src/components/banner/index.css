@@ -90,6 +90,16 @@ body{overflow-x: hidden;}
     transition: .3s;
 }
 
+.banner_txt div a{
+
+    font-size: 20px;
+    font-family: 'main_font';
+
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
 .banner_txt div button:hover{
     background-color: rgba(30, 58, 57 ,.9);
 

@@ -3,8 +3,12 @@ import './index.css'
 import banner_img from '../../asset/bannerImg.png'
 import banner_icons_img from '../../asset/bannerIcons.png'
 import bannerMobIcons from '../../asset/mobIcons.png'
+import { useState } from "react"
 
 export default function Banner(){
+
+    const [email, setEmail] = useState('')
+
     return(
         <div id='home' className="banner_section" >
             <img className="banner_mob_icons" alt='' src={bannerMobIcons} />
@@ -12,8 +16,8 @@ export default function Banner(){
                 <h3>Unifying Your Security</h3>
                 <p>Etlas provides a single web-based platform for all your security management needs. Powered by a modern micro-computer, Etlas integrates access control, video surveillance, alarm systems, and all other third party systems on a single platform.  </p>
                 <div>
-                    <input placeholder="Email address ...." />
-                    <button>Get in touch</button>
+                    <input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
+                    <button><a href={email}>Get in touch</a></button>
                 </div>
             </div>
 
