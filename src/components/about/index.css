@@ -5,10 +5,10 @@
 
 
 .about_section{
-    padding: 2em 3em;
+    padding: 2em 0em;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     font-family: 'main_font';
     /* background: url(../../asset/aboutBG.png); */
@@ -18,7 +18,7 @@
 }
 
 .about_txt{
-    width: 40%;
+    width: 70%;
     padding: 2em 0;
 }
 
@@ -30,9 +30,9 @@
 
 .about_txt p{
     font-size: 20px;
-    margin: 0;
+    margin: 1em 0em;
     font-weight: 500;
-    padding: 6px 0;
+    padding: 2px 0;
 }
 .about_txt button{
     height: 60px;
@@ -51,6 +51,17 @@
     margin: 1.5em 0;
     transition: .3s;
 }
+
+.about_txt a{
+
+    font-size: 20px;
+    font-family: 'main_font';
+
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
 .slick-arrow::before{
     /* content: '>'; */
     color: #fff ;

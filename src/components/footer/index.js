@@ -19,7 +19,7 @@ export default function Footer(){
                     <img  alt='' src={logo} />
                     <p>Etlas</p>
                     </div>
-                    <button>Get Started</button>
+                    {/**<button>Get Started</button>
                     <div className="social_icons" >
                         <img alt='' src={fbIcon} />
                         <img alt='' src={instagram} />
@@ -27,6 +27,7 @@ export default function Footer(){
                         <img alt='' src={youtube} />
                         <img alt='' src={titter} />
                     </div>
+                    */}
                 </div>
 
                 <div className="footer_links">
@@ -40,31 +41,31 @@ export default function Footer(){
                 </div>
                 <div className="footer_links">
                     <h6>Company</h6>
-                    <a href="#">How Etlas Works</a>
-                    <a href="#">Get Quote</a>
-                    <a href="#">Pricing</a>
-                    <a href="#">Customers</a>
-                    <a href="#">Secure by Design</a>
-                    <a href="#">Access Control Guide</a>
+                    
+                    <a href="#message_form_section">Get Quote</a>
+                    <a href="https://isssecurity.sg">Integrated Security Solutions</a>
+                    
+    
                 </div>
                 <div className="footer_links">
-                    <h6>Help</h6>
+                   {/* <h6>Help</h6>
                     <a href="#">Support</a>
                     <a href="#">Contact</a>
                     <a href="#">Press</a>
-                 
+                */ }
                 </div>
 
             </div>
 
             <div className="footer_nav">
                 <p>© 2022 Etlas. All Rights Reserved</p>
-
+                {/*
                 <div>
                     <a href="#">Cookies</a>
                     <a href="#">Privacy</a>
                     <a href="#">Terms</a>
                 </div>
+                */ }
             </div>
         </div>
     )

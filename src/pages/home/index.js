@@ -24,7 +24,7 @@ export default function Home (){
 
                     <div className="ourCode_txt">
                         <h4>Our Code, Our Hardware</h4>
-                        <p>Our control boards are designed and developed in-house by Etlas engineers – we own our source code and hardware. This provides you with the customizability which off-the-shelve   software don’t. We understand that you may have specific         security needs which are important to you, and we are here   for you.</p>
+                        <p>Our control boards are designed and developed in-house by Etlas engineers – we own our source code and hardware. This provides you with the customisability for complex requirements. </p>
                     </div>
                 </div>
               

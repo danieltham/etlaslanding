@@ -27,9 +27,9 @@ export default function Navbar() {
 
             <div class="nav-links">
                 <a onClick={()=>setNavState(false)} href="#home">Home</a>
-                <a onClick={()=>setNavState(false)} href="#solution"> Our Solution </a>
+                <a onClick={()=>setNavState(false)} href="#etlas_features"> Our Solution </a>
                 <a onClick={()=>setNavState(false)} href="#about">About Us</a>
-               <button onClick={()=>setNavState(false)}>Enquiry</button>
+               <button onClick={()=>setNavState(false)}><a href="#message_form_section">Enquiry</a></button>
             </div>
         </div>
           </OutsideClickHandler>
