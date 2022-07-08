@@ -14,7 +14,7 @@ export default function Banner(){
             <img className="banner_mob_icons" alt='' src={bannerMobIcons} />
             <div className="banner_txt">
                 <h3>Unifying Your Security</h3>
-                <p>Etlas provides a single web-based platform for all your security management needs. Powered by a modern micro-computer, Etlas integrates access control, video surveillance, alarm systems, and all other third party systems on a single platform.  </p>
+                <p>Etlas provides a single web-based platform for all your security management needs. Powerful. Modern. Flexible.</p>
                 <div>
                     <input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
                     <button><a href={email}>Get in touch</a></button>
