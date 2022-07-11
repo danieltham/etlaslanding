@@ -44,7 +44,7 @@ export default function MessageForm() {
       </div>
 
       <div className="form_section_txt">
-         <h2>How We Are Better!</h2>
+         <h2>How We Are Better</h2>
          { /*   <div>
           <h6>Donec a massa vel enim ultricies bibendm. </h6>
           <span>Vivamus ac semper ante, sit amet tincidunt nisi. Sed placerat magna diam, eu digniss im justo ornare ac. Sed dictum as tristique phare ra. Aenean sed posuere hendrerit justo, at iaculis orci molestie hendrerit. </span>

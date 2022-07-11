@@ -11,7 +11,7 @@ import flexiblityImg from '../../asset/flexiblity.png'
 export default function Features(){
     return(
         <div id="etlas_features" className="features_section" >
-            <h4>Etlas Features</h4>
+            <h4>Features</h4>
             <div className="etlas_features">
                 <div className="features_box">
                     <div className="feature">

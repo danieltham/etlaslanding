@@ -31,8 +31,8 @@ export default function AboutSection() {
         </p>
         <p>
           Etlas is part of the product portfolio of Integrated Security
-          Solutions Incorporated in 2000, ISS has a track record of consulting,
-          designing, and building security and digital solutions for users in
+          Solutions. Incorporated in 2000, we have a track record of consulting,
+          designing and building security and digital solutions for users in
           multiple industries.
         </p>
         <button><a href="https://isssecurity.sg">Learn More</a></button>
