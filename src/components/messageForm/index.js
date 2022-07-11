@@ -15,10 +15,10 @@ export default function MessageForm() {
   const [submit, setSubmit] = useState(true)
   
   const sendMsg = async () => { 
-    setContentToSend(firstName+lastName+email+phone+message)
+
     let apilink = "https://eserver.etlas.sg/postEmail/"
     
-    apilink += subject+"/"+content
+    apilink += subject+ "/" +firstName+lastName+" Email address: "+ email + "Phone: " + phone + "Message: " +message
     console.log("link: ",apilink);
     
       window.open(apilink);
