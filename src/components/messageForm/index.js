@@ -10,8 +10,21 @@ export default function MessageForm() {
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
+  const [content, setContentToSend] = useState('');
+
   const [submit, setSubmit] = useState(true)
   
+  const sendMsg = async () => { 
+    setContentToSend(firstName+lastName+email+phone+message)
+    let apilink = "https://eserver.etlas.sg/postEmail/"
+    
+    apilink += subject+"/"+content
+    console.log("link: ",apilink);
+    
+      window.open(apilink);
+  }
+
+
   return (
     <div className="message_form_section">
 
@@ -39,7 +52,7 @@ export default function MessageForm() {
             Thank you for your message!
           </p>
           
-          <button onClick={e => setSubmit(false)}><a href={firstName+lastName+email+phone+subject+message}>Submit</a></button>
+          <button onClick={sendMsg}>Submit</button>
         </div>
       </div>
 

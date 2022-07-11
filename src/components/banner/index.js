@@ -17,7 +17,7 @@ export default function Banner(){
                 <p>Etlas provides a single web-based platform for all your security management needs. Powerful. Modern. Flexible.</p>
                 <div>
                     <input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
-                    <button><a href={email}>Get in touch</a></button>
+                    <button><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
                 </div>
             </div>
 
