@@ -18,7 +18,7 @@ export default function MessageForm() {
 
     let apilink = "https://eserver.etlas.sg/postEmail/"
     
-    apilink += subject+ "/" +firstName+lastName+" Email address: "+ email + "Phone: " + phone + "Message: " +message
+    apilink += subject+ "/" +"From: " +firstName+ " " +lastName+" Email address: "+ email + " Phone: " + phone + " Message: " +message
     console.log("link: ",apilink);
     
       window.open(apilink);
