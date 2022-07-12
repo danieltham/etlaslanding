@@ -21,6 +21,7 @@ export default function MessageForm() {
     apilink += subject+ "/" +"From: " +firstName+ " " +lastName+" Email address: "+ email + " Phone: " + phone + " Message: " +message
     console.log("link: ",apilink);
     alert("Thank you. We will contact you as soon as possible.");
+    window.location.reload(false);
     //window.open(apilink);
   }
 
