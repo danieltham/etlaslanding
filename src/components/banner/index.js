@@ -20,7 +20,7 @@ export default function Banner(){
                     {/**<input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
                     <button><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
                     */}
-                     <button><img alt='' src={whatsappButton} /><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
+                     <button><img alt='' src={whatsappButton} /><a href={"https://wa.me/6594569932/?text=Hi!"}></a></button>
                 </div>
             </div>
 
