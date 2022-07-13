@@ -3,6 +3,7 @@ import './index.css'
 import banner_img from '../../asset/bannerImg.png'
 import banner_icons_img from '../../asset/bannerIcons.png'
 import bannerMobIcons from '../../asset/mobIcons.png'
+import whatsappButton from '../../asset/ws.png'
 import { useState } from "react"
 
 export default function Banner(){
@@ -16,8 +17,10 @@ export default function Banner(){
                 <h3>Unifying Your Security</h3>
                 <p>Etlas provides a single web-based platform for all your security management needs. Powerful. Modern. Flexible.</p>
                 <div>
-                    <input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
+                    {/**<input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
                     <button><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
+                    */}
+                     <button><img alt='' src={whatsappButton} /><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
                 </div>
             </div>
 
