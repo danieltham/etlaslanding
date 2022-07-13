@@ -17,10 +17,10 @@ export default function Banner(){
                 <h3>Unifying Your Security</h3>
                 <p>Etlas provides a single web-based platform for all your security management needs. Powerful. Modern. Flexible.</p>
                 <div>
-                    {/**<input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
+                    {/*<input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
                     <button><a href={"https://eserver.etlas.sg/postEmail/Contact/"+email}>Get in touch</a></button>
                     */}
-                     <button><img alt='' src={whatsappButton} /><a href={"https://wa.me/6594569932/?text=Hi!"}></a></button>
+                    <img alt='' src={whatsappButton} /><a href={"https://wa.me/6594569932/?text=Hi!"}></a>
                 </div>
             </div>
 
