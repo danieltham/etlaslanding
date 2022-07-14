@@ -23,11 +23,11 @@ export default function Banner(){
                    
                 </div>
             </div>
-            <a href={"https://wa.me/6594569932/?text=Hi!"}><img alt='' src={whatsappButton} /></a>
+            
             <div className="banner_img">
                 <img className="banner_main_img" alt='' src={banner_img} />
                 <img className="banner_icons" alt='' src={banner_icons_img} />
-            </div>
+            </div><a href={"https://wa.me/6594569932/?text=Hi!"}><img alt='' src={whatsappButton} /></a>
         </div>
     )
 }
