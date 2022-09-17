@@ -4,7 +4,7 @@ import "./index.css";
 
 export default function MessageForm() {
 
-  const axios = require('axios');
+  //const axios = require('axios');
   const [firstName, setFirstname] = useState('')
   const [lastName, setLastname] = useState('')
   const [email, setEmail] = useState('')
@@ -21,11 +21,17 @@ export default function MessageForm() {
     
     apilink += subject+ "/" +"From: " +firstName+ " " +lastName+" Email address: "+ email + " Phone: " + phone + " Message: " +message
     console.log("link: ",apilink);
-    alert("Thank you. We will contact you as soon as possible.");
+    //alert("Thank you. We will contact you as soon as possible.");
     //const response = await axios.post(apilink);
+    fetch(apilink, {  // Enter your IP address here
 
-    window.open(apilink);
-    window.location.reload(false)
+    method: 'POST', 
+    mode: 'cors'
+    //body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
+
+    })
+    //window.open(apilink);
+    //window.location.reload(true)
     //return response.data;
 
     
