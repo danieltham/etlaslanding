@@ -31,7 +31,7 @@ export default function MessageForm() {
 
     })
     alert("Thank you. We will contact you as soon as possible.");
-    //window.open(apilink);
+    window.open(apilink);
     //window.location.reload(true)
     //return response.data;
 
