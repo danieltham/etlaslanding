@@ -30,6 +30,7 @@ export default function MessageForm() {
     //body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
 
     })
+    alert("Thank you. We will contact you as soon as possible.");
     //window.open(apilink);
     //window.location.reload(true)
     //return response.data;
