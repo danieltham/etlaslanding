@@ -23,13 +23,13 @@ export default function MessageForm() {
     console.log("link: ",apilink);
     //alert("Thank you. We will contact you as soon as possible.");
     //const response = await axios.post(apilink);
-    fetch(apilink, {  // Enter your IP address here
+    //fetch(apilink, {  // Enter your IP address here
 
-    method: 'POST', 
-    mode: 'cors'
+    //method: 'POST', 
+    //mode: 'cors'
     //body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
 
-    })
+    //})
     alert("Thank you. We will contact you as soon as possible.");
     window.open(apilink);
     //window.location.reload(true)
