@@ -76,10 +76,10 @@ export default function MessageForm() {
           <span>Vivamus ac semper ante, sit amet tincidunt nisi. Sed placerat magna diam, eu digniss im justo ornare ac. Sed dictum as tristique phare ra. Aenean sed posuere hendrerit justo, at iaculis orci molestie hendrerit. </span>
           </div>
       */}
+          <p>Single platform</p>
+          <p>Simplicity</p>
+          <p>We own our hardware and software</p>
           <p>Extreme customisability</p>
-          <p>Fully in-house team for both hardware and software</p>
-          <p>Ease and simplicity</p>
-          <p>Singular platform</p>
       </div>
     </div>
   );
