@@ -58,7 +58,7 @@ export default function Footer(){
             </div>
 
             <div className="footer_nav">
-                <p>© 2022 Etlas. All Rights Reserved</p>
+                <p>© 2023 Etlas. All Rights Reserved</p>
                 {/*
                 <div>
                     <a href="#">Cookies</a>
