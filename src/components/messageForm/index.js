@@ -1,86 +1,129 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./index.css";
+
+const SERVICE_ID  = 'gmail_service';
+const TEMPLATE_ID = 'contact_us';
+const PUBLIC_KEY  = 'RjFzYKQ9BvY0FvBMs';
+
+const steps = [
+    { icon: '📋', text: 'We assess your site within 24 hours' },
+    { icon: '⚙️', text: 'We design a tailored security solution' },
+    { icon: '✓',  text: 'Installation and setup completed in days' },
+]
 
 export default function MessageForm() {
 
-  //const axios = require('axios');
   const [firstName, setFirstname] = useState('')
-  const [lastName, setLastname] = useState('')
-  const [email, setEmail] = useState('')
-  const [phone, setPhone] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-  const [content, setContentToSend] = useState('');
+  const [lastName,  setLastname]  = useState('')
+  const [email,     setEmail]     = useState('')
+  const [phone,     setPhone]     = useState('')
+  const [company,   setCompany]   = useState('')
+  const [siteType,  setSiteType]  = useState('')
+  const [status,    setStatus]    = useState('idle') // idle | sending | success | error
 
-  const [submit, setSubmit] = useState(true)
-  
-  const sendMsg = async () => { 
-
-    let apilink = "https://eserver.etlas.sg/postEmail/"
-    
-    apilink += subject+ "/" +"From: " +firstName+ " " +lastName+" Email address: "+ email + " Phone: " + phone + " Message: " +message
-    console.log("link: ",apilink);
-    //alert("Thank you. We will contact you as soon as possible.");
-    //const response = await axios.post(apilink);
-    //fetch(apilink, {  // Enter your IP address here
-
-    //method: 'POST', 
-    //mode: 'cors'
-    //body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
-
-    //})
-    alert("Thank you. We will contact you as soon as possible.");
-    window.open(apilink);
-    //window.location.reload(true)
-    //return response.data;
-
-    
+  const sendMsg = async () => {
+    setStatus('sending')
+    try {
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name:    `${firstName} ${lastName}`,
+          email:   email,
+          phone:   phone,
+          company: company,
+          site:    siteType,
+          time:    new Date().toLocaleString('en-SG', { timeZone: 'Asia/Singapore' }),
+        },
+        PUBLIC_KEY
+      )
+      setStatus('success')
+    } catch (err) {
+      console.error(err)
+      setStatus('error')
+    }
   }
 
-
   return (
-    <div className="message_form_section">
+    <div id="contact" className="message_form_outer">
+      <div className="message_form_section">
 
+        {/* ── Left: form card ── */}
+        <div id="message_form_section" className="msg_form_container" data-animate>
+          <div className="message_form">
+            <h4>Get in Touch</h4>
+            <p>Let us know how we can help</p>
 
-      <div id="message_form_section" className="msg_form_container">
-        <div className="message_form">
-          <h4>Leave a Message</h4>
-          <p>
-            Let us know how can we help
-          </p>
+            {status === 'success' ? (
+              <div className="form_success">
+                <p>Thank you — we'll be in touch within 24 hours.</p>
+              </div>
+            ) : (
+              <>
+                <div className="form_inps">
+                  <div className="form_inps_row">
+                    <input placeholder="First name" onInput={e => setFirstname(e.target.value)} />
+                    <input placeholder="Last name"  onInput={e => setLastname(e.target.value)} />
+                  </div>
+                  <div className="form_inps_row">
+                    <input placeholder="Email"      onInput={e => setEmail(e.target.value)} />
+                    <input placeholder="Phone"      onInput={e => setPhone(e.target.value)} />
+                  </div>
+                  <div className="form_inps_row">
+                    <input placeholder="Company"    onInput={e => setCompany(e.target.value)} />
+                    <select defaultValue="" onChange={e => setSiteType(e.target.value)}>
+                      <option value="" disabled>Type of site</option>
+                      <option value="Office">Office</option>
+                      <option value="Fitness & Wellness">Fitness &amp; Wellness</option>
+                      <option value="Worksite">Worksite</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                </div>
 
-          <div className="form_inps">
-            <div>
-              <input id="firstName" placeholder="first name" onInput={e => setFirstname(e.target.value)}/>
-              <input id="lastName" placeholder="last name" onInput={e => setLastname(e.target.value)}/>
-              <input id="email" placeholder="email" onInput={e => setEmail(e.target.value)}/>
-              <input id="phone" placeholder="phone" onInput={e => setPhone(e.target.value)}/>
-            </div>
+                {status === 'error' && (
+                  <p className="form_error">Something went wrong — please try again or contact us directly.</p>
+                )}
 
-            <input id="sub" placeholder="subject" onInput={e => setSubject(e.target.value)}/>
-            <input id="message" placeholder="How can we help you" onInput={e => setMessage(e.target.value)}/>
+                <button onClick={sendMsg} disabled={status === 'sending'}>
+                  {status === 'sending' ? 'Sending...' : 'Submit'}
+                </button>
+              </>
+            )}
           </div>
-       
-          <p hidden={submit}>
-            Thank you for your message!
-          </p>
-          
-          <button onClick={sendMsg}>Submit</button>
         </div>
-      </div>
 
-      <div className="form_section_txt">
-         <h2>How We Are Better</h2>
-         { /*   <div>
-          <h6>Donec a massa vel enim ultricies bibendm. </h6>
-          <span>Vivamus ac semper ante, sit amet tincidunt nisi. Sed placerat magna diam, eu digniss im justo ornare ac. Sed dictum as tristique phare ra. Aenean sed posuere hendrerit justo, at iaculis orci molestie hendrerit. </span>
+        {/* ── Right: pitch text ── */}
+        <div className="form_section_txt" data-animate style={{'--anim-delay': '0.15s'}}>
+          <h2>Get Your Site Secured.</h2>
+          <p className="form_pitch_sub">Tell us about your site and we'll recommend the right setup — no obligation.</p>
+
+          <div className="form_bullets">
+            {steps.map((s, i) => (
+              <div className="form_bullet" key={i}>
+                <div className="form_bullet_icon">{s.icon}</div>
+                <span>{s.text}</span>
+              </div>
+            ))}
           </div>
-      */}
-          <p>Single platform</p>
-          <p>Simplicity</p>
-          <p>We own our hardware and software</p>
-          <p>Extreme customisability</p>
+
+          <div className="form_contact_row">
+            <div className="form_contact_block">
+              <strong>Call us</strong>
+              <a href="tel:+6589243354">+65 8924 3354</a>
+            </div>
+            <div className="form_contact_block">
+              <strong>Email us</strong>
+              <a href="mailto:fabian@etlas.sg">fabian@etlas.sg</a>
+            </div>
+            <div className="form_contact_block">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/6589243354/?text=Hi!%20I'm%20interested%20to%20book%20a%20consultation." target="_blank" rel="noreferrer">Message us</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );

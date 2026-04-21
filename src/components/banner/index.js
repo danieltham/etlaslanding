@@ -1,33 +1,28 @@
 import React from "react"
 import './index.css'
-import banner_img from '../../asset/bannerImg.png'
-import banner_icons_img from '../../asset/bannerIcons.png'
-import bannerMobIcons from '../../asset/mobIcons.png'
-import whatsappButton from '../../asset/ws.png'
-import { useState } from "react"
+import hero_products from '../../asset/HeroProducts.png'
+import { goToContact } from '../../utils/goToContact'
+
+
 
 export default function Banner(){
-
-    const [email, setEmail] = useState('')
-
     return(
-        <div id='home' className="banner_section" >
-            <img className="banner_mob_icons" alt='' src={bannerMobIcons} />
-            <div className="banner_txt">
-                <h3>Unifying Your Security</h3>
-                <p>Etlas provides a single web-based platform for all your security management needs. Powerful. Modern. Flexible.</p>
-                <div>
-                    {/*<input id="email" placeholder="Email address ...." onInput={e => setEmail(e.target.value)}/>
-                    
-                    <a href={"https://wa.me/6594569932/?text=Hi!"}><img alt='' src={whatsappButton} /></a>*/}
-                   <button><a href="https://wa.me/6594569932/?text=Hi!">Get in touch</a></button>
-                   </div>
+        <div id='home' className="banner_section">
+            <div className="banner_inner">
+                <div className="banner_txt">
+                    <h1 className="hero-anim-1">Unified Security Systems Platform</h1>
+                    <p className="hero-anim-2">Designed and built in Singapore, our hardware and software offers a modern and fully integrated security stack for every need. We handle everything — design, installation, and ongoing management.</p>
+                    <div className="hero-anim-3">
+                        <button onClick={goToContact}>Get in Touch</button>
+                    </div>
+                </div>
+
             </div>
 
-            <div className="banner_img">
-                <img className="banner_main_img" alt='' src={banner_img} />
-                <img className="banner_icons" alt='' src={banner_icons_img} />
+            <div className="banner_img hero-anim-img">
+                <img className="banner_main_img" alt='Etlas security systems dashboard — access control and CCTV management platform' src={hero_products} />
             </div>
+
         </div>
     )
 }
